@@ -1,4 +1,6 @@
 import { Component } from 'angular2/core';
+import { IProduct } from './product';
+
 @Component({
     selector: 'pm-products',
     templateUrl: 'app/products/product-list.component.html'
@@ -9,7 +11,7 @@ export class ProductListComponent {
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = "cart";
-    products: any[] = [
+    products: IProduct[] = [
     {
         "productId": 1,
         "productName": "Leaf Rake",
