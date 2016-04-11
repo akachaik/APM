@@ -5,7 +5,7 @@ import { Component, OnChanges } from 'angular2/core';
     templateUrl: 'app/shared/star.component.html',
     styleUrls: ['app/shared/star.component.css']
 })
-export class StartComponent implements OnChanges {
+export class StarComponent implements OnChanges {
     starWidth: number;
     rating: number = 4;
     
