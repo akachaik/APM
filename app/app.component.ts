@@ -5,6 +5,8 @@ import { ProductService } from './products/product.service';
 import { HTTP_PROVIDERS } from 'angular2/http';
 import 'rxjs/Rx'; // Load all features
 
+import { ROUTER_PROVIDERS }  from 'angular2/router';
+
 @Component({
     selector: 'pm-app',
     template: `
@@ -13,7 +15,7 @@ import 'rxjs/Rx'; // Load all features
         <pm-products></pm-products>
     </div>`,
     directives: [ProductListComponent],
-    providers: [ProductService, HTTP_PROVIDERS]
+    providers: [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
 })
 export class AppComponent {
     pageTitle: string = "Acme Product Management";
