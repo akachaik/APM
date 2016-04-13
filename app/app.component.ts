@@ -7,6 +7,7 @@ import 'rxjs/Rx'; // Load all features
 
 import { ROUTER_PROVIDERS, RouteConfig, ROUTER_DIRECTIVES }  from 'angular2/router';
 import { WelcomeComponent } from './home/welcome.component';
+import { ProductDetail } from './products/product-detail.component';
 
 @Component({
     selector: 'pm-app',
@@ -21,6 +22,9 @@ import { WelcomeComponent } from './home/welcome.component';
                 </ul>
             </div>
         </nav>
+        <div class='container'>
+            <router-outlet></router-outlet>
+        </div>
     </div>
     `,
     directives: [ROUTER_DIRECTIVES],
@@ -28,7 +32,8 @@ import { WelcomeComponent } from './home/welcome.component';
 })
 @RouteConfig([
     { path: '/welcome', name: 'Welcome', component : WelcomeComponent, useAsDefault: true },
-    { path: '/products', name: 'Products', component : ProductListComponent }
+    { path: '/products', name: 'Products', component : ProductListComponent },
+    { path: '/product/:id', name: 'ProductDetail', component : ProductDetail },
 ])
 export class AppComponent {
     pageTitle: string = "Acme Product Management";
